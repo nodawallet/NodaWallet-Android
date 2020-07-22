@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:id="@+id/imgBackAdvanced"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_arrow"
+                >
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/advanced_settings"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imgDelete"
+                android:visibility="visible"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_delete"
+                >
+
+            </ImageView>
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appbarHeader"
+        >
+
+
+        <LinearLayout
+            android:paddingBottom="@dimen/_30sdp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/ic_round_wallet"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/wallet_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:textColor="@color/settingtextcolor"
+                android:id="@+id/mainwalletName"
+                android:text="@string/mainwallet"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintEnd_toEndOf="@id/wallet_image"
+                app:layout_constraintStart_toStartOf="@id/wallet_image"
+                app:layout_constraintTop_toBottomOf="@+id/wallet_image" />
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:textColor="@color/sub_header"
+                android:id="@+id/multicoin_wallet_text"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                android:text="@string/multicoin_wallet"
+                app:layout_constraintTop_toBottomOf="@id/mainwalletName"
+                app:layout_constraintStart_toStartOf="@id/mainwalletName"
+                app:layout_constraintEnd_toEndOf="@id/mainwalletName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:padding="@dimen/_8sdp"
+                android:id="@+id/consMain"
+                app:layout_constraintTop_toBottomOf="@+id/multicoin_wallet_text"
+                android:layout_height="wrap_content"
+                style="@style/Ripple"
+                >
+
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:textColor="@color/header_text"
+                    android:id="@+id/textName"
+                    android:text="@string/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.application.nodawallet.utils.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/wallet_name"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:id="@+id/edtWalletName"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/textName"
+                    >
+
+                </com.application.nodawallet.utils.CustomEditText>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/imgTick"
+                    android:src="@drawable/ic_check"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/textName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+
+                </ImageView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:background="@color/viewcolor"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/edtWalletName"
+                    >
+
+                </View>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llShowPhrase"
+                android:orientation="vertical"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:id="@+id/consSecretPhase"
+                    app:layout_constraintTop_toBottomOf="@+id/consMain"
+                    android:background="@color/name_background"
+                    android:layout_height="wrap_content"
+                    style="@style/Ripple"
+                    >
+
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:textColor="@color/header_text"
+                        android:id="@+id/secret_phrase_text"
+                        android:text="@string/show_secret_phrase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/secret_phrase_img"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:textColor="@color/sub_header"
+                    android:id="@+id/warning_message_text"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:text="@string/warning_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/consSecretPhase" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llShowPrivate"
+                android:orientation="vertical"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:id="@+id/consPrivateKey"
+                    app:layout_constraintTop_toBottomOf="@+id/consMain"
+                    android:background="@color/name_background"
+                    android:layout_height="wrap_content"
+                    style="@style/Ripple"
+                    >
+
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:textColor="@color/header_text"
+                        android:text="Show private key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:src="@drawable/ic_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:textColor="@color/sub_header"
+                    android:id="@+id/textPrivatekey"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:text="@string/warning_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/consSecretPhase" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llExportPublickey"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@color/name_background"
+                    app:layout_constraintTop_toBottomOf="@+id/warning_message_text"
+                    android:id="@+id/consExportKey"
+                    android:layout_height="wrap_content"
+                    style="@style/Ripple"
+                    >
+
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:textColor="@color/header_text"
+                        android:id="@+id/exportkey_text"
+                        android:text="@string/export_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/exportkey_img"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/exportkey_img"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/exportkey_text"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:textColor="@color/sub_header"
+                    android:id="@+id/publickey_warning_text"
+                    android:text="@string/publickey_warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/consExportKey" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llCopyAddress"
+                android:orientation="vertical"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:id="@+id/consCopyAddress"
+                    android:background="@color/name_background"
+                    app:layout_constraintTop_toBottomOf="@+id/warning_message_text"
+                    android:layout_height="wrap_content"
+                    style="@style/Ripple"
+                    >
+
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:textColor="@color/header_text"
+                        android:id="@+id/exportadd"
+                        android:text="@string/copy_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:textColor="@color/sub_header"
+                    android:id="@+id/textCopyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/consExportKey" />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

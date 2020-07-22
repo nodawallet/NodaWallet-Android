@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/childCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_round"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/faqChildConst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/expandIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/bottomactive"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:id="@+id/faqChildConst1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="Do you offer app customization?"
+                    android:textStyle="bold"
+                    android:textColor="@color/bottomactive"
+                    />
+
+                <TextView
+                    android:id="@+id/answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColorLink="@color/bottomactive"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="1.2dp"
+                    android:visibility="gone"
+                    android:textColor="@color/dexdollarvalue"
+                    android:text="Yes, we have a team of analysts, who gather your requirements and work with our in-house technical team to customize the app and add the functionality you need &amp; deliver the app. Customizations incur additional cost. Cost varies based on the level of effort."
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

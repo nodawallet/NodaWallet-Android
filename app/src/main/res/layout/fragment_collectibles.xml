@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.InvestmentFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rlInvest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@drawable/ic_rectangle"
+        android:layout_margin="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:id="@+id/rlSearch"
+            >
+            <com.application.nodawallet.utils.CustomEditText
+                android:layout_width="match_parent"
+                android:hint="@string/search"
+                android:textSize="12sp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:background="@drawable/border_search"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:inputType="text"
+                android:layout_toLeftOf="@+id/imgCancel"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_search"
+                android:layout_height="@dimen/_24sdp"
+                android:id="@+id/edtSearchNews">
+
+            </com.application.nodawallet.utils.CustomEditText>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgCancel"
+                style="@style/Ripple"
+                android:tint="@color/bottomactive"
+                android:src="@drawable/ic_close"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_alignParentRight="true"
+                android:text="@string/cancel"
+                >
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rlSearch"
+            android:id="@+id/swipeInvestments"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_below="@+id/rlSearch"
+                android:layout_margin="@dimen/_5sdp"
+                android:id="@+id/recycleInvest"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:id="@+id/consInvest"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgError"
+                android:src="@drawable/ic_404error"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2">
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:id="@+id/textNoCollection"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/dextextcolor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgError"
+                android:text="@string/no_collections_found"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/btnRefresh"
+                android:backgroundTint="@color/bottomactive"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNoCollection"
+                android:text="@string/refresh"
+                >
+
+            </com.google.android.material.button.MaterialButton>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

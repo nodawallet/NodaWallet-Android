@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SendActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBackMulti"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:clickable="true"
+                android:padding="2dp"
+                android:src="@drawable/ic_back_arrow">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/mScanBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/ic_scan"
+                android:tint="@color/settingtextcolor"
+                android:visibility="invisible" />
+
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/import_multi_coin_wallet"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarHeader"
+        app:layout_constraintVertical_bias="0.94">
+
+        <RelativeLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <com.application.nodawallet.utils.CustomEditText
+                android:id="@+id/edtPhrase"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toStartOf="@+id/textPaste"
+                android:background="@null"
+                android:hint="@string/phrase"
+                android:textSize="14sp"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:id="@+id/textPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/paste"
+                android:textAllCaps="true"
+                android:textColor="@color/bottomactive"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/View5"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/copybackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.application.nodawallet.utils.CustomTextViewLight
+            android:id="@+id/textSeperate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:text="@string/typically_12_sometimes_24_words_separated_by_single_spaces"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnImport"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/bottomactive"
+            android:text="@string/imports"
+            android:textColor="@color/textcolor"
+            app:cornerRadius="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSeperate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

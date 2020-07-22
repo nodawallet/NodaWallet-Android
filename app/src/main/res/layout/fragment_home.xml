@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <include
+        layout="@layout/layout_header"
+        android:id="@+id/layoutHeader"
+        >
+
+    </include>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/layoutHeader"
+        android:id="@+id/imgHoney"
+        android:src="@drawable/honeybackground"
+        >
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/llHomeTab"
+        android:layout_below="@+id/layoutHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        >
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:text="@string/tokens"
+            style="@style/Ripple"
+            android:textColor="@color/bottomactive"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textSell"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/corner_left"
+            android:id="@+id/textTokens"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:textColor="@color/hometabinvest"
+            style="@style/Ripple"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/textBuy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/corner_right"
+            android:text="@string/collectibles"
+            android:id="@+id/textCollectibles"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+    </LinearLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPagerHome"
+        android:layout_below="@+id/llHomeTab"
+        >
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:id="@+id/imgBackNews"
+                android:clickable="true"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_arrow"
+                >
+
+            </ImageView>
+
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/news"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarHeader"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/imgNewsDetail"
+                >
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgNewsDetail"
+                android:id="@+id/textTitleDetail"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTime"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/textTitleDetail"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:tint="#E08813"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_time"
+                    >
+
+                </ImageView>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/textTimeDetail"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="12:00"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:tint="#E08813"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_date"
+                    >
+
+                </ImageView>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/textDateDetail"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="12/04/2020"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+
+
+            </LinearLayout>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textContentDetail"
+                android:textSize="14sp"
+                android:text=""
+                android:textColorLink="@color/bottomactive"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_below="@+id/llTime"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

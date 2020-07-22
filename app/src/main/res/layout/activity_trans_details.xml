@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TransDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="2dp"
+                    android:id="@+id/imgBackDetails"
+                    android:clickable="true"
+                    style="?attr/selectableItemBackgroundBorderless"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_back_arrow"
+                    >
+
+                </ImageView>
+
+
+                <com.application.nodawallet.utils.CustomTextViewBold
+                    android:id="@+id/textHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/transaction_details"
+                    android:textColor="@color/headertextcolor"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </com.application.nodawallet.utils.CustomTextViewBold>
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/textValue"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="0.000"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+
+                <com.application.nodawallet.utils.CustomTextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/settingtextcolor"
+
+                    android:id="@+id/textRecep"
+                    android:text="@string/recipient"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textRecipient"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_below="@+id/textRecep"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+                <com.application.nodawallet.utils.CustomTextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/settingtextcolor"
+
+                    android:id="@+id/textNet"
+                    android:text="@string/network_fee"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textNet"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/textNetworkfee"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+                <com.application.nodawallet.utils.CustomTextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/settingtextcolor"
+
+                    android:id="@+id/textTrans"
+                    android:text="@string/transaction_time"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textTrans"
+                    android:id="@+id/textTime"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+                <com.application.nodawallet.utils.CustomTextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/settingtextcolor"
+
+                    android:id="@+id/textConf"
+                    android:text="@string/confirmations"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textConf"
+                    android:id="@+id/textConfirmations"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <com.application.nodawallet.utils.CustomTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/more_details"
+            android:background="?attr/selectableItemBackground"
+            android:textAllCaps="true"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/textMore"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/bottomactive"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewBold>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

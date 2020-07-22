@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.TransHistoryFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:id="@+id/imgBackHistory"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_arrow"
+                >
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/transaction_history"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:visibility="gone"
+            android:id="@+id/llTransHistory"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:text="@string/send"
+                style="@style/Ripple"
+                android:textColor="@color/dexexback"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textSell"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/corner_left"
+                android:id="@+id/textSend"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:textColor="@color/dextextcolor"
+                style="@style/Ripple"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@+id/textBuy"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/purchaserect"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/receive"
+                android:id="@+id/textReceive"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:textColor="@color/dextextcolor"
+                style="@style/Ripple"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@+id/textBuy"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/corner_right"
+                android:text="@string/exchange"
+                android:id="@+id/textExchange"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llTransHistory"
+            android:id="@+id/viewPagerTransHistory"
+            >
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

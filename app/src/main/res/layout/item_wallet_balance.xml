@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/llToken"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Ripple"
+        android:id="@+id/consCoin"
+        android:layout_marginVertical="@dimen/_3sdp">
+
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgCoin"
+            android:padding="2dp"
+            android:layout_centerVertical="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_eth"
+            >
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/llValue"
+            android:layout_toRightOf="@+id/imgCoin"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="vertical"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/textCoinName"
+                android:textColor="@color/purchasesecoin"
+                android:textSize="15sp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgCoin"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/textCoinValue"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    app:layout_constraintStart_toEndOf="@+id/imgCoin"
+                    app:layout_constraintTop_toBottomOf="@+id/textCoinName"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/textMarketPercentage"
+                    android:textColor="@color/stockgreen"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    app:layout_constraintStart_toEndOf="@+id/textCoinValue"
+                    app:layout_constraintTop_toBottomOf="@+id/textCoinName"
+                    >
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/llValue"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="end"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical">
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_3sdp"
+                android:visibility="gone"
+                android:src="@drawable/ic_graphline"
+                android:id="@+id/imgGraph"
+                android:layout_marginRight="@dimen/_5sdp"
+                >
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:id="@+id/textBal"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="end"
+                android:textColor="@color/purchasesecoin"
+
+                android:textSize="13sp">
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:id="@+id/textEqvValue"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="end"
+                android:textSize="11sp">
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:id="@+id/viewToken"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:background="@color/viewcolor"
+        >
+
+    </View>
+
+</LinearLayout>

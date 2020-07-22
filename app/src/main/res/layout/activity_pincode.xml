@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:id="@+id/imgFingerprint"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:tint="@color/bottomactive"
+        android:src="@drawable/ic_fingerprint"
+        >
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgLogo"
+            android:tint="@color/bottomactive"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_lock"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogo"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/relOtp"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/textpasscode"
+                android:id="@+id/tvEnterPin"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_70sdp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/enter_code"
+                >
+
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/textpasscode"
+                android:layout_marginHorizontal="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEnterPin"
+                android:layout_centerHorizontal="true"
+                android:text="@string/code_is_required_for_entrance_to_noda_wallet"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_confrmpin"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@+id/relOtp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/code1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="23dp"
+                    android:src="@drawable/passcode_unselect" />
+                <ImageView
+                    android:id="@+id/code2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="23dp"
+                    android:src="@drawable/passcode_unselect" />
+                <ImageView
+                    android:id="@+id/code3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="23dp"
+                    android:src="@drawable/passcode_unselect" />
+                <ImageView
+                    android:id="@+id/code4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/passcode_unselect"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintSetpin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_below="@+id/rl_confrmpin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t1"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/textpasscode"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:foreground="@drawable/numberbackground"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t3"
+                    app:layout_constraintStart_toEndOf="@+id/t1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.529"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/textpasscode"
+                        android:text="ABC"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t3"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/t2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="DEF"
+                        android:textColor="@color/textpasscode"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t4"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="GHI"
+                        android:textColor="@color/textpasscode"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t5"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t6"
+                    app:layout_constraintStart_toEndOf="@+id/t4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.529"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/textpasscode"
+                        android:text="JKL"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t6"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/t5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textSize="25sp"
+                        android:textColor="@color/textpasscode"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/textpasscode"
+                        android:text="MNO"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t7"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t8"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/textpasscode"
+                        android:text="7"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/textpasscode"
+                        android:text="PQRS"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t8"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t9"
+                    app:layout_constraintStart_toEndOf="@+id/t7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.529"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="8"
+                        android:textSize="25sp"
+                        android:textColor="@color/textpasscode"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/textpasscode"
+                        android:text="TUV"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t9"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/t8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="WXYZ"
+                        android:textColor="@color/textpasscode"
+                        android:letterSpacing="0.1"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/textView161"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t0"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/t0"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/clearImg1"
+                    app:layout_constraintStart_toEndOf="@+id/textView161"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/textpasscode"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/clearImg1"
+                    android:gravity="center"
+                    android:foreground="@drawable/numberbackground"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/t0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:tint="@color/textpasscode"
+                        android:src="@drawable/ic_backspace"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_below="@+id/constraintSetpin"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/Ripple"
+                android:id="@+id/textFingerPrint"
+                android:text="Fingerprint Login"
+                android:padding="@dimen/_10sdp"
+                android:visibility="invisible"
+                android:textColor="@color/bottomactive"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/Ripple"
+                android:id="@+id/textCancel"
+                android:text="@string/cancel"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/_10sdp"
+                android:visibility="visible"
+                android:textColor="@color/bottomactive"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

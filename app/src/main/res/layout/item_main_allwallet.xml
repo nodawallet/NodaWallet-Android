@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/transparentsettings"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Ripple"
+        android:id="@+id/consWallet"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:src="@drawable/ic_round_wallet"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_check"
+            android:id="@+id/imgCheck"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/img1"
+            >
+
+        </ImageView>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img1"
+            android:orientation="vertical">
+
+
+            <com.application.nodawallet.utils.CustomTextViewLight
+                android:id="@+id/walletName"
+                android:textColor="@color/settingtextcolor"
+                android:textSize="16sp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.application.nodawallet.utils.CustomTextViewLight
+                android:id="@+id/walletType"
+                android:layout_below="@+id/walletName"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/imgInfo"
+                android:textColor="@color/settingtextcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:id="@+id/imgInfo"
+                android:src="@drawable/ic_info_active"
+                android:padding="@dimen/_8sdp"
+                android:layout_width="50dp"
+                android:layout_centerVertical="true"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

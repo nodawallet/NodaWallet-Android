@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SettingsFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/honeybackground">
+
+    </ImageView>
+
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/layout_header">
+
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/rlSettings"
+                style="@style/Ripple"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgWallet1"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:src="@drawable/ic_round_wallet">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/imgWallet1"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:id="@+id/textName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_wallet"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textName"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/multi_coin_wallet"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="11sp"
+
+                        >
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAdvancedSettings"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/transparentsettings"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/viewcolor"
+                    android:visibility="visible">
+
+                </View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"
+                    android:visibility="visible">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgsettings"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_settings_profile">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgsettings"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/advanced_settings"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFingerPrint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/viewcolor"
+                    android:visibility="visible">
+
+                </View>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"
+                    android:visibility="visible">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgLock"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_touch_id">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgLock"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/touch_id"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchTouchId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    app:sb_background="#665A5A5A"
+                    app:sb_checked_color="@color/bottomactive">
+
+                </com.suke.widget.SwitchButton>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"
+                    android:visibility="visible">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgPush"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_push_notification">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgPush"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/push_notifications"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <com.suke.widget.SwitchButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchNotifications"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow"
+                    app:sb_background="#665A5A5A"
+                    app:sb_checked_color="@color/bottomactive">
+
+                </com.suke.widget.SwitchButton>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"
+                    android:visibility="visible">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgDark"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_darkmode">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgDark"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dark_mode"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    app:sb_background="#665A5A5A"
+                    app:sb_checked_color="@color/bottomactive">
+
+                </com.suke.widget.SwitchButton>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLanguage"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgLanguage"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_language"
+                    android:tint="@color/dextextcolor">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgLanguage"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/language"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCurrency"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgCurrency"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_currency">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgCurrency"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/currency"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBrowser"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgBrowser"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_browser">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgBrowser"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/browser"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTransaction"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgTrans"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_trans">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgTrans"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/transactions"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlWalletConnect"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgWallet"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/walletconnect">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgWallet"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wallet_connect"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlNews"
+                style="@style/Ripple"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgNews"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_currency">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgNews"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlFaq"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgFaq"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/faqimage">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgFaq"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlTwitterbtn"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgTwitter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_twitter">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgTwitter"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twitter"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTelegrambtn"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgTelegram"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_telegram">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgTelegram"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/telegram"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAbout"
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgAbout"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:tint="@color/dextextcolor"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_about">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgAbout"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentsettings"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/imgFb"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_fb">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgFb"
+                    android:orientation="vertical">
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Facebook"
+                        android:textColor="@color/settingtextcolor"
+                        android:textSize="16sp">
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_arrow">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp">
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

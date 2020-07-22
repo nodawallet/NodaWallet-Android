@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConfirmDepositActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:id="@+id/imgBackSend"
+                android:clickable="true"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_arrow"
+                >
+
+            </ImageView>
+
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/confirm"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.application.nodawallet.utils.CustomTextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/settingtextcolor"
+        android:id="@+id/textSendAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/appbarHeader"
+        >
+
+    </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/textSendAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/settingtextcolor"
+                android:text="@string/from"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:id="@+id/textFromAdd"
+                android:text=""
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/settingtextcolor"
+                android:text="@string/to"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:id="@+id/textToAdd"
+                android:text=""
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/settingtextcolor"
+                android:text="@string/network_fee"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="end"
+                android:id="@+id/textFee"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:text=""
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/settingtextcolor"
+                android:text="@string/max_total"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="end"
+                android:id="@+id/textReceiveBalance"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+        </RelativeLayout>
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/textBalance"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/bottomactive"
+        android:text="@string/confirm"
+        android:textColor="@color/textcolor"
+        app:cornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

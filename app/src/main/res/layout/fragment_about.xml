@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.AboutFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/honeybackground">
+
+    </ImageView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:id="@+id/imgBackAbout"
+                android:clickable="true"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_arrow"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:id="@+id/imgAdd"
+                android:visibility="invisible"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:clickable="true"
+                android:layout_alignParentRight="true"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_add"
+                >
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/about"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarHeader"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlAboutApp"
+            style="@style/Ripple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/transparentsettings">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/viewcolor">
+
+            </View>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/viewcolor">
+
+            </View>
+
+            <ImageView
+                android:id="@+id/imgTwitter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/dextextcolor"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/ic_about">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/imgTwitter"
+                android:orientation="vertical">
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:textColor="@color/settingtextcolor"
+                    android:textSize="16sp">
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:src="@drawable/ic_arrow">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTerms"
+            style="@style/Ripple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparentsettings">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/viewcolor">
+
+            </View>
+
+            <ImageView
+                android:id="@+id/imgTelegram"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/dextextcolor"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/ic_terms">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/imgTelegram"
+                android:orientation="vertical">
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms"
+                    android:textColor="@color/settingtextcolor"
+                    android:textSize="16sp">
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:src="@drawable/ic_arrow">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPrivacy"
+            style="@style/Ripple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparentsettings">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/viewcolor">
+
+            </View>
+
+            <ImageView
+                android:id="@+id/imgAbout"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/dextextcolor"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/ic_privacy">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/imgAbout"
+                android:orientation="vertical">
+
+                <com.application.nodawallet.utils.CustomTextViewNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacypolicy"
+                    android:textColor="@color/settingtextcolor"
+                    android:textSize="16sp">
+
+                </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:src="@drawable/ic_arrow">
+
+            </ImageView>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/viewcolor">
+
+        </View>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

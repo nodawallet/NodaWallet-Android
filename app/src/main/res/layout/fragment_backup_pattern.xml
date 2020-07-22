@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.BackupPatternFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/consIcon"
+        android:layout_marginTop="@dimen/_80sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:src="@drawable/ic_roundsplash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_splashinside"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+           >
+
+        </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consIcon"
+        android:orientation="vertical">
+
+        <com.application.nodawallet.utils.CustomTextViewSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/textPrivate"
+            android:layout_gravity="center"
+            android:textColor="@color/dextextcolor"
+            android:text="@string/private_and_secure"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:id="@+id/textKeys"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:text="@string/private_keys_never_leave_your_device"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:visibility="visible"
+        android:id="@+id/consCreateWallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.6"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCreateWallet"
+            android:textColor="@color/textcolor"
+            android:backgroundTint="@color/bottomactive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/create_new_wallet"
+            >
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:id="@+id/mImportwallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/btnCreateWallet"
+            android:textColor="@color/bottomactive"
+            android:text="@string/import_existing_wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/consConset"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:buttonTint="@color/bottomactive"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textSize="12sp"
+            android:id="@+id/checkConsent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/i_understand_that_if_i_lose_my_recovery_words_i_will_not_be_able_to_access_my_wallet"
+            >
+
+        </CheckBox>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.6"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnContinue"
+            android:textColor="@color/textcolor"
+            android:backgroundTint="@color/bottomactive"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkConsent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/continuee"
+            >
+
+        </com.google.android.material.button.MaterialButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

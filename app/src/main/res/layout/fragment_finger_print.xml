@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.PincodeActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/consFinger"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.application.nodawallet.utils.CustomTextViewSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_passcode"
+            android:textSize="16sp"
+            android:id="@+id/textUsePasscode"
+            style="@style/Ripple"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imgFingerprint"
+            android:layout_marginTop="96dp"
+            android:src="@drawable/ic_fingerprint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <com.application.nodawallet.utils.CustomTextViewSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one_touch_sign_in"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:id="@+id/textOneTouch"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFingerprint"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+        <com.application.nodawallet.utils.CustomTextViewSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/textPlaceFinger"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:text="@string/place_your_fingertip_on_the_scanner_to_verify_your_identity"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOneTouch"
+            >
+        </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:cornerRadius="@dimen/_5sdp"
+            android:id="@+id/btnAuthenticate"
+            android:backgroundTint="@color/white"
+            android:text="@string/authenticate"
+            android:textColor="@color/bottomactive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPlaceFinger">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.application.nodawallet.utils.CustomTextViewSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_18sdp"
+            android:text="@string/fingerprint_sign_in_makes_your_app_login_much_faster_your_device_should_have_at_least_one_fingerprint_registered_in_your_device_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

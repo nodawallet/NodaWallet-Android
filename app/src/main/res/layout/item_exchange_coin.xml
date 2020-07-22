@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Ripple"
+    android:id="@+id/consParent"
+    android:layout_marginVertical="@dimen/_5sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/imgCoin"
+        android:padding="2dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_bitcoin"
+        >
+
+    </ImageView>
+
+    <com.application.nodawallet.utils.CustomTextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bitcoin"
+        android:id="@+id/textCoinName"
+        android:textSize="18sp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgCoin"
+        >
+
+    </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+
+    <com.application.nodawallet.utils.CustomTextViewNormal
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textBal"
+        android:layout_marginRight="@dimen/_5sdp"
+
+        >
+
+    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

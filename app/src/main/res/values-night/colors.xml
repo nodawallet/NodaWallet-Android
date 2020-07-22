@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#994A4A4A</color>
+    <color name="colorPrimaryDark">#994A4A4A</color>
+    <color name="colorAccent">#E08813</color>
+    <color name="headertextcolor">#E08813</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="radiobtn">#FFFFFF</color>
+    <color name="lightgrey">#CACACA</color>
+
+
+
+    //settings
+    <color name="settingtextcolor">#FFF</color>
+    <color name="bottominactive">#FFF</color>
+    <color name="bottomactive">#E08813</color>
+    <color name="transparentsettings">#E6313131</color>
+    <color name="settingsview">#000000</color>
+    <color name="trackerActive">#E08813</color>
+    <color name="trackerInActive">#fff</color>
+
+    //purchase
+    <color name="purchasecard">#E6313131</color>
+    <color name="purchaserect">#4A4A4A</color>
+    <color name="purchasesecoin">#FFF</color>
+    <color name="hometabtoken">#4A4A4A</color>
+    <color name="hometokentext">#C2C2C2</color>
+    <color name="hometabinvest">#C2C2C2</color>
+    <color name="hometabright">#8F262525</color>
+
+
+
+
+
+
+    //scan
+    <color name="copybackground">#585858</color>
+    <color name="copyicon">#000</color>
+    <color name="textcolor">#FFF</color>
+    <color name="bottomsheet">#D9585858</color>
+
+
+    //dex
+    <color name="dextextcolor">#FFF</color>
+    <color name="dexexback">#000</color>
+    <color name="dexexpair">#FFF</color>
+    <color name="dexdollarvalue">#777777</color>
+
+    //stockex
+    <color name="stockgreen">#72C166</color>
+
+    //Mainwallet
+
+    <color name="sub_header">#B2B2B2</color>
+    <color name="name_background">#99313131</color>
+    <color name="header_text">#FFFFFF</color>
+
+
+    //home
+    <color name="homecard"> #994A4A4A</color>
+    <color name="homesearch"> #665A5A5A</color>
+    <color name="homewallet"> #40000000</color>
+    <color name="viewcolor"> #F4F4F4</color>
+
+    //Paperkeypatter
+
+    <color name="bg_grey">#777777</color>
+    <color name="info_clr">#90434343</color>
+    <color name="title_clr">#FFFFFF</color>
+
+    //currencyinfo
+    <color name="re_clr">#50101010</color>
+
+    //pnenomic
+    <color name="ibutton">#4A4A4A</color>
+
+    //selectcurrency
+    <color name="view_background">#f3f3f3</color>
+
+    //CustomToken
+    <color name="bg">#10585858</color>
+
+    //passcode
+    <color name="passcode">#99313131</color>
+    <color name="textpasscode">#FFFF</color>
+    <color name="graphbg">#80000000</color>
+
+
+
+    <!--  100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5% — 0D
+    0% — 00-->
+
+
+</resources>

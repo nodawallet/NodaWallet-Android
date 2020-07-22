@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.WalletConnectActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBackWallet"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:clickable="true"
+                android:padding="2dp"
+                android:src="@drawable/ic_back_arrow">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/mScanBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/ic_scan"
+                android:tint="@color/settingtextcolor"
+                android:visibility="invisible" />
+
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/wallet_connect"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarHeader"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgWallet"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            >
+
+        </ImageView>
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:id="@+id/textWalletName"
+            android:textSize="20sp"
+            android:text="Wallet Connect"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textConnect"
+                android:visibility="invisible"
+                android:text="Connected to"
+                android:textSize="15sp"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textUrl"
+                android:layout_alignParentRight="true"
+                android:textSize="13sp"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            >
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:visibility="invisible"
+                android:id="@+id/textAdd"
+                android:textSize="15sp"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+            <com.application.nodawallet.utils.CustomTextViewNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textAddress"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/textAdd"
+                android:layout_alignParentRight="true"
+                android:textSize="13sp"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewNormal>
+
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_height="wrap_content"
+            android:text="Disconnect"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:id="@+id/btnDisconnect"
+            android:textColor="@color/textcolor"
+            android:backgroundTint="@color/bottomactive"
+            app:cornerRadius="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardDex"
+            >
+
+        </com.google.android.material.button.MaterialButton>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

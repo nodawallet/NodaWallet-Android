@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ExchangeHistoryFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <com.application.nodawallet.utils.CustomTextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_exchange_history"
+        android:visibility="gone"
+        android:id="@+id/textNoExHistory"
+        android:layout_centerInParent="true"
+        >
+
+    </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlCurrency"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/llExcSendCoin"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          >
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:id="@+id/imgExSend"
+            android:src="@drawable/ic_dollar">
+
+        </ImageView>
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BNB"
+            android:ems="3"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/purchasesecoin"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:id="@+id/textExSendCurrency"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+        <ImageView
+            android:id="@+id/imgSendArrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_downarrow">
+
+        </ImageView>
+      </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/rlCurrency"
+        android:id="@+id/recycleExHistory"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+  </RelativeLayout>
+  <FrameLayout
+      android:id="@+id/bottomsheetExchange"
+      android:layout_width="match_parent"
+      android:layout_height="350dp"
+      app:behavior_hideable="true"
+      app:behavior_peekHeight="0dp"
+      app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottomsheet_curve"
+        >
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/imgRect"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_centerHorizontal="true"
+          android:src="@drawable/ic_rectanglebottom"
+          >
+
+      </ImageView>
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginHorizontal="@dimen/_10sdp"
+          android:id="@+id/rlSearch"
+          android:background="@drawable/border_search"
+          android:layout_below="@+id/imgRect"
+          >
+        <com.application.nodawallet.utils.CustomEditText
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:hint="@string/search"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="12sp"
+            android:inputType="text"
+            android:drawablePadding="2dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:layout_height="@dimen/_20sdp"
+            android:id="@+id/searchHisCoin">
+
+        </com.application.nodawallet.utils.CustomEditText>
+
+      </RelativeLayout>
+
+      <androidx.core.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_5sdp"
+          android:layout_below="@+id/rlSearch"
+          >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycleExCoin"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+      </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+
+  </FrameLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

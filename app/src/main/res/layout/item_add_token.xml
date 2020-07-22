@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparentsettings"
+    style="@style/Ripple"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/LinearLayout1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:id="@+id/imgBtc"
+            android:src="@drawable/ic_eth"
+            android:layout_centerVertical="true" />
+
+        <com.application.nodawallet.utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTokenName"
+            android:textSize="14sp"
+            android:textColor="@color/settingtextcolor"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:layout_toRightOf="@+id/imgBtc"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:text="Ethereum"
+            >
+
+        </com.application.nodawallet.utils.CustomTextViewNormal>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mToggle"
+            android:theme="@style/SCBSwitch"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            >
+
+        </Switch>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/viewcolor"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

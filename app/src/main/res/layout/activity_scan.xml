@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"   >
+    <SurfaceView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <ImageView
+        android:id="@+id/imgshowbackup"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/square" />
+
+    <com.application.nodawallet.utils.MyScanningView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/myscan"
+        android:layout_centerInParent="true"
+        >
+
+    </com.application.nodawallet.utils.MyScanningView>
+
+    <com.application.nodawallet.utils.CustomTextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textPosition"
+        android:alpha="0.5"
+        android:textColor="#FFF"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/position_your_code_in_the_frame"
+        android:layout_below="@+id/imgshowbackup"
+        >
+
+    </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:id="@+id/imgFlash"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/ic_flash_on"
+        >
+
+    </ImageView>
+
+
+
+    <ImageView
+        android:id="@+id/imgGalleryQr"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:tint="#FFF"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_30sdp"
+        android:src="@drawable/gallery_icon"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

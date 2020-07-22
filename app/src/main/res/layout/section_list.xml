@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imgFlag"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_aud"
+
+        />
+
+
+    <RadioButton
+        android:id="@+id/radio_button1"
+        android:layoutDirection="rtl"
+        android:drawableTint="@color/dextextcolor"
+        style="@style/MyRadioButton"
+        app:layout_constraintStart_toEndOf="@+id/imgFlag"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@color/viewcolor"
+        app:layout_constraintTop_toBottomOf="@+id/radio_button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

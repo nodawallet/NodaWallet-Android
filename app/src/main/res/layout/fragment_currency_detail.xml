@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:id="@+id/imgCurrencyDetail"
+                android:clickable="true"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_arrow"
+                >
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/appbarHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llGraph"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/llMark"
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/imgCurrency" />
+
+                    <com.application.nodawallet.utils.CustomTextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/textBalance"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/llMark"
+                    android:gravity="end"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    >
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/textMarketPrice" />
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:id="@+id/textMarketPercentage"
+                        android:textColor="@color/stockgreen"/>
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="visible"
+                android:id="@+id/llGraphPage"
+                android:layout_height="240dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    >
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/textGraphvalue"
+                        >
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/textTimevalue"
+                        >
+
+                    </com.application.nodawallet.utils.CustomTextViewNormal>
+
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:id="@+id/chartGraph"
+                    android:visibility="visible"
+
+                    >
+
+                </com.github.mikephil.charting.charts.LineChart>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:textSize="10sp"
+                        android:id="@+id/chip24"
+                        app:chipBackgroundColor="@color/graphback"
+                        android:textColor="@color/bottomactive"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="24H"
+                        >
+
+                    </com.google.android.material.chip.Chip>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:textSize="11sp"
+                        android:id="@+id/chipWeek"
+                        android:textColor="@color/bottomactive"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        app:chipBackgroundColor="@color/graphback"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Week"
+                        >
+
+                    </com.google.android.material.chip.Chip>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:id="@+id/chipMonth"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        app:chipBackgroundColor="@color/bottomactive"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Month"
+                        >
+
+                    </com.google.android.material.chip.Chip>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:textSize="11sp"
+                        android:id="@+id/chipYear"
+                        android:textColor="@color/bottomactive"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        app:chipBackgroundColor="@color/graphback"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Year"
+                        >
+
+                    </com.google.android.material.chip.Chip>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="43dp"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:textColor="@color/bottomactive"
+                        android:id="@+id/chipAlltime"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:backgroundTint="@color/graphback"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="All Time"
+                        >
+
+                    </com.google.android.material.chip.Chip>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llSend"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_copy_round">
+                        <ImageView
+                            android:layout_width="15sp"
+                            android:layout_height="15sp"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_upload"/>
+                    </RelativeLayout>
+
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:text="@string/send"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/llReceive"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_copy_round">
+                        <ImageView
+                            android:layout_width="15sp"
+                            android:layout_height="15sp"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_receive"/>
+                    </RelativeLayout>
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:text="@string/receive"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/llCopyAdd"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_copy_round">
+                        <ImageView
+                            android:layout_width="15sp"
+                            android:layout_height="15sp"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_files"/>
+                    </RelativeLayout>
+                    <com.application.nodawallet.utils.CustomTextViewNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:text="@string/copy"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:id="@+id/rlTrans"
+                android:textColor="@color/bottomactive"
+                android:text="@string/transaction_history"
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+
+
+            <com.application.nodawallet.utils.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textLoading"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"
+                android:text="Loading.."
+                >
+
+            </com.application.nodawallet.utils.CustomTextViewSemiBold>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecycle_info"
+                android:layout_below="@+id/rlTrans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+

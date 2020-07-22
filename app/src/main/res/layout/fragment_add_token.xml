@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:id="@+id/imgBackToken"
+                android:clickable="true"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_arrow"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:id="@+id/imgAdd"
+                android:visibility="invisible"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:clickable="true"
+                android:layout_alignParentRight="true"
+                style="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_add"
+                >
+
+            </ImageView>
+
+            <com.application.nodawallet.utils.CustomTextViewBold
+                android:id="@+id/textHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/main_wallet"
+                android:textColor="@color/headertextcolor"
+                android:textSize="18sp"
+                android:textStyle="bold">
+
+            </com.application.nodawallet.utils.CustomTextViewBold>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/appbarHeader"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:id="@+id/rlSearch"
+        >
+        <com.application.nodawallet.utils.CustomEditText
+            android:layout_width="match_parent"
+            android:hint="@string/search"
+            android:textSize="12sp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:paddingLeft="@dimen/_5sdp"
+            android:background="@drawable/border_search"
+            android:inputType="text"
+            android:layout_toLeftOf="@+id/imgCancel"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:layout_height="@dimen/_22sdp"
+            android:id="@+id/edtTokenSearch">
+
+        </com.application.nodawallet.utils.CustomEditText>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgCancel"
+            style="@style/Ripple"
+            android:tint="@color/bottomactive"
+            android:src="@drawable/ic_close"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_alignParentRight="true"
+            android:text="@string/cancel"
+            >
+
+        </ImageView>
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mTokenrecycle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlSearch"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/llAddToken"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8sp"
+            android:visibility="gone"
+            android:background="@color/copybackground"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15sp"
+                android:tint="@color/bottomactive"
+                android:src="@drawable/ic_add_circle_outline_black_24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:gravity="center|start"
+                android:textColor="@color/dextextcolor"
+                android:text="@string/add_custom_token"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
